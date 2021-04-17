@@ -1,0 +1,74 @@
+#plan {
+  text-align: center;
+
+  .plan-list {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-items: stretch;
+  }
+
+  .plan-item {
+    width: 20%;
+    padding-bottom: 65px;
+    position: relative;
+    border: 1px solid cl(white);
+    background-color: cl(white);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px cl(first);
+
+    @include lg {
+      width: 40%;
+
+      &:nth-child(n + 3) {
+        margin-top: 50px;
+
+        &:nth-child(odd) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    h3 {
+      padding-top: 30px;
+    }
+
+    .plan-detail {
+      padding-top: 30px;
+    }
+
+    &:nth-child(n + 2) {
+      margin-left: 35px;
+    }
+
+    .plan-price {
+      position: absolute;
+      right: 25px;
+      bottom: 20px;
+    }
+  }
+
+  .plan-notice {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}

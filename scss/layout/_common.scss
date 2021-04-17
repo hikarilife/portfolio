@@ -1,0 +1,44 @@
+section {
+  padding: {
+    top: 80px;
+    bottom: 90px;
+  }
+}
+
+.cmn-title {
+  text-transform: capitalize;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1;
+  padding: {
+    bottom: 40px;
+  }
+}
+
+.cmn-subtitle {
+  font-size: 28px;
+}
+
+.cmn-btn {
+  text-align: center;
+  a {
+    display: flex;
+    margin: 0 auto;
+    background-color: cl(third);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-bottom: 5px solid cl(second);
+    width: 180px;
+    height: 50px;
+
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      margin-top: 3px;
+      background: cl(third);
+      border-bottom: 2px solid cl(second);
+    }
+  }
+}

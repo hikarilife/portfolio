@@ -1,0 +1,123 @@
+header {
+  .header {
+    background-color: cl(first);
+    color: cl(white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    &.-fixed {
+      position: fixed;
+      z-index: 100;
+    }
+
+    .header-logo {
+      padding-left: 30px;
+    }
+
+    .nav-list {
+      display: flex;
+      margin-right: 30px;
+    }
+
+    .nav-item {
+      a {
+        color: cl(white);
+        font-size: 18px;
+        padding: 20px 15px;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    .hamburger-btn {
+      display: none;
+    }
+
+    @include lg {
+      // ハンバーガーメニュー
+      /*----------------------------
+      * メニュー開閉ボタン
+      *----------------------------*/
+      $menu-height: 80px;
+      $line-height: 3px; // ハンバーガーメニューのラインの太さ
+      $line-width: 52px; // ハンバーガーメニューのラインの幅
+      $padding-horizontal: 30px; // ハンバーガーメニューの左右のpadding
+
+      .hamburger-btn {
+        cursor: pointer;
+        margin-left: auto;
+        position: relative;
+        height: $menu-height;
+        width: $line-width + ($padding-horizontal * 2);
+        display: inline-block;
+      }
+
+      .hamburger-btn div {
+        position: absolute;
+        left: $padding-horizontal;
+        height: $line-height;
+        width: $line-width;
+        background-color: white;
+        border-radius: 2px;
+      }
+      .hamburger-btn div:nth-of-type(1) {
+        top: ($menu-height - ($line-height * 3)) / 23 * 8;
+      }
+      .hamburger-btn div:nth-of-type(2) {
+        top: ($menu-height / 2) - ($line-height / 2);
+      }
+      .hamburger-btn div:nth-of-type(3) {
+        bottom: ($menu-height - ($line-height * 3)) / 23 * 8 - 1;
+      }
+
+      /*----------------------------
+      * メニュー本体
+      *----------------------------*/
+      .header-nav {
+        position: absolute;
+      }
+      .nav-list {
+        display: block;
+        position: fixed;
+        top: $menu-height;
+        z-index: 1;
+        width: 100vw;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        text-align: center;
+      }
+      .nav-item a {
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 30px;
+
+        &:hover {
+          background: cl(second);
+        }
+      }
+
+      /*----------------------------
+      * アニメーション部分
+      *----------------------------*/
+
+      /* アニメーション前のメニューの状態 */
+      .nav-list {
+        transform: translateX(100vw);
+        transition: all 0.3s;
+      }
+      /* アニメーション後のメニューの状態 */
+      .nav-list.is-active {
+        transform: translateX(0);
+      }
+    }
+  }
+}

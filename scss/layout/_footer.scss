@@ -1,0 +1,47 @@
+footer {
+  background-color: cl(first);
+  color: cl(white);
+  text-align: center;
+  border: 1px solid cl(second);
+  height: 250px;
+  padding: {
+    top: 60px;
+    bottom: 15px;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: {
+      top: 30px;
+      bottom: 90px;
+    }
+
+    .nav-item {
+      margin: 0 20px;
+
+      a {
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+        @include lg {
+          padding: 0;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.5);
+          @include lg {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 12px;
+    padding-top: 15px;
+  }
+}
