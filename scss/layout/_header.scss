@@ -31,7 +31,7 @@ header {
         color: cl(white);
         font-size: 18px;
         padding: 20px 15px;
-        @include md {
+        @include lg {
           padding: 10px 0px;
         }
 

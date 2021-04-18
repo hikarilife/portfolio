@@ -121,7 +121,7 @@ header .header .nav-item a {
   padding: 20px 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header .header .nav-item a {
     padding: 10px 0px;
   }
