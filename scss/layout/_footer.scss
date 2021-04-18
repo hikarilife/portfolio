@@ -21,6 +21,10 @@ footer {
     .nav-item {
       margin: 0 20px;
 
+      @include md {
+        margin: 0 8px;
+      }
+
       a {
         color: white;
         padding: 10px 20px;

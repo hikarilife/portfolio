@@ -36,6 +36,14 @@
     border-radius: 15px;
     box-shadow: 0 3px 3px cl(first);
 
+    &:nth-child(n + 2) {
+      margin-left: 35px;
+
+      @include md {
+        margin-left: 0;
+      }
+    }
+
     @include lg {
       width: 40%;
 
@@ -48,16 +56,20 @@
       }
     }
 
+    @include md {
+      width: 60%;
+
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+    }
+
     h3 {
       padding-top: 30px;
     }
 
     .plan-detail {
       padding-top: 30px;
-    }
-
-    &:nth-child(n + 2) {
-      margin-left: 35px;
     }
 
     .plan-price {

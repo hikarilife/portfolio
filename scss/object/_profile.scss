@@ -3,11 +3,18 @@
   .profile {
     width: 750px;
     margin: 0 auto;
+    @include md {
+      width: 530px;
+    }
 
     .profile-contents {
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      @include md {
+        display: block;
+        text-align: center;
+      }
     }
 
     .icon {
@@ -22,10 +29,15 @@
       margin: auto 30px;
       h3 {
         font-size: 30px;
+        text-align: center;
       }
 
       p {
         padding-top: 10px;
+
+        @include md {
+          padding-left: 20px;
+        }
         span {
           background: linear-gradient(transparent 0%, cl(third) 0%);
           font-weight: bold;

@@ -111,12 +111,12 @@ header {
 
       /* アニメーション前のメニューの状態 */
       .nav-list {
-        transform: translateX(100vw);
+        display: none;
         transition: all 0.3s;
       }
       /* アニメーション後のメニューの状態 */
       .nav-list.is-active {
-        transform: translateX(0);
+        display: block;
       }
     }
   }

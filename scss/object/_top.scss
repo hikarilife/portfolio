@@ -28,6 +28,9 @@
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 20px;
+    @include md {
+      font-size: 32px;
+    }
   }
 
   .top-subtitle {

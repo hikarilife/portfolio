@@ -188,14 +188,12 @@ header .header .hamburger-btn {
     background: #737373;
   }
   header .header .nav-list {
-    -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
+    display: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
   header .header .nav-list.is-active {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    display: block;
   }
 }
 
@@ -225,6 +223,12 @@ footer .nav-list {
 
 footer .nav-list .nav-item {
   margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  footer .nav-list .nav-item {
+    margin: 0 8px;
+  }
 }
 
 footer .nav-list .nav-item a {
@@ -288,6 +292,12 @@ footer .copyright {
   padding-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  #top .top-title {
+    font-size: 32px;
+  }
+}
+
 #top .top-subtitle {
   font-size: 18px;
   padding-bottom: 40px;
@@ -302,6 +312,12 @@ footer .copyright {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  #profile .profile {
+    width: 530px;
+  }
+}
+
 #profile .profile .profile-contents {
   margin: 0 auto;
   display: -webkit-box;
@@ -310,6 +326,13 @@ footer .copyright {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #profile .profile .profile-contents {
+    display: block;
+    text-align: center;
+  }
 }
 
 #profile .profile .icon {
@@ -328,10 +351,17 @@ footer .copyright {
 
 #profile .profile .profile-text h3 {
   font-size: 30px;
+  text-align: center;
 }
 
 #profile .profile .profile-text p {
   padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #profile .profile .profile-text p {
+    padding-left: 20px;
+  }
 }
 
 #profile .profile .profile-text p span {
@@ -461,6 +491,16 @@ footer .copyright {
           box-shadow: 0 3px 3px #0f64be;
 }
 
+#plan .plan-item:nth-child(n + 2) {
+  margin-left: 35px;
+}
+
+@media (max-width: 768px) {
+  #plan .plan-item:nth-child(n + 2) {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 992px) {
   #plan .plan-item {
     width: 40%;
@@ -473,16 +513,21 @@ footer .copyright {
   }
 }
 
+@media (max-width: 768px) {
+  #plan .plan-item {
+    width: 60%;
+  }
+  #plan .plan-item:nth-child(2) {
+    margin-top: 50px;
+  }
+}
+
 #plan .plan-item h3 {
   padding-top: 30px;
 }
 
 #plan .plan-item .plan-detail {
   padding-top: 30px;
-}
-
-#plan .plan-item:nth-child(n + 2) {
-  margin-left: 35px;
 }
 
 #plan .plan-item .plan-price {
