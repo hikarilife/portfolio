@@ -11,6 +11,10 @@ body {
 
 h1 {
   font-size: 30px;
+
+  @include sm {
+    font-size: 20px;
+  }
   a {
     color: cl(white);
   }

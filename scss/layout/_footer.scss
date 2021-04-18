@@ -9,6 +9,11 @@ footer {
     bottom: 15px;
   }
 
+  @include md {
+    height: 150px;
+    padding-top: 100px;
+  }
+
   .nav-list {
     display: flex;
     justify-content: center;
@@ -17,13 +22,12 @@ footer {
       top: 30px;
       bottom: 90px;
     }
+    @include md {
+      display: none;
+    }
 
     .nav-item {
       margin: 0 20px;
-
-      @include md {
-        margin: 0 8px;
-      }
 
       a {
         color: white;

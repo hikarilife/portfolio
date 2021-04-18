@@ -106,9 +106,15 @@
     right: 70px;
     left: 70px;
   }
+  @include sm {
+    padding: {
+      right: 0;
+      left: 0;
+    }
+  }
 
   .flow {
-    padding-left: 120px;
+    padding-left: 100px;
     position: relative;
   }
   .flow::before {
@@ -120,7 +126,11 @@
     display: block;
     position: absolute;
     top: 0;
-    left: 120px;
+    left: 100px;
+
+    @include sm {
+      display: none;
+    }
   }
   .flow > li {
     position: relative;
@@ -140,8 +150,11 @@
     display: block;
     position: absolute;
     top: 0;
-    left: -120px;
+    left: -100px;
     z-index: 10;
+    @include sm {
+      margin-left: 5px;
+    }
   }
   .flow > li .icon::after {
     content: "";
@@ -153,10 +166,16 @@
     left: 100%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    @include sm {
+      display: none;
+    }
   }
   .flow > li dl {
     padding-left: 70px;
     position: relative;
+    @include sm {
+      padding-left: 0;
+    }
   }
   .flow > li dl::before,
   .flow > li dl::after {
@@ -164,6 +183,9 @@
     display: block;
     position: absolute;
     top: 15px;
+    @include sm {
+      display: none;
+    }
   }
   .flow > li dl::before {
     width: 7px;

@@ -2,5 +2,9 @@
   text-align: center;
   p {
     line-height: 3;
+
+    @include sm {
+      font-size: 14px;
+    }
   }
 }

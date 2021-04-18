@@ -14,6 +14,12 @@ h1 {
   font-size: 30px;
 }
 
+@media (max-width: 576px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
 h1 a {
   color: #fff;
 }
@@ -115,6 +121,12 @@ header .header .nav-item a {
   padding: 20px 15px;
 }
 
+@media (max-width: 768px) {
+  header .header .nav-item a {
+    padding: 10px 0px;
+  }
+}
+
 header .header .nav-item a:hover {
   background: rgba(255, 255, 255, 0.3);
 }
@@ -142,14 +154,14 @@ header .header .hamburger-btn {
     margin-left: auto;
     position: relative;
     height: 80px;
-    width: 112px;
+    width: 100px;
     display: inline-block;
   }
   header .header .hamburger-btn div {
     position: absolute;
     left: 30px;
     height: 3px;
-    width: 52px;
+    width: 40px;
     background-color: white;
     border-radius: 2px;
   }
@@ -184,6 +196,15 @@ header .header .hamburger-btn {
     color: #fff;
     font-size: 30px;
   }
+}
+
+@media (max-width: 992px) and (max-width: 768px) {
+  header .header .nav-item a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
   header .header .nav-item a:hover {
     background: #737373;
   }
@@ -207,6 +228,13 @@ footer {
   padding-bottom: 15px;
 }
 
+@media (max-width: 768px) {
+  footer {
+    height: 150px;
+    padding-top: 100px;
+  }
+}
+
 footer .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,14 +249,14 @@ footer .nav-list {
   padding-bottom: 90px;
 }
 
-footer .nav-list .nav-item {
-  margin: 0 20px;
+@media (max-width: 768px) {
+  footer .nav-list {
+    display: none;
+  }
 }
 
-@media (max-width: 768px) {
-  footer .nav-list .nav-item {
-    margin: 0 8px;
-  }
+footer .nav-list .nav-item {
+  margin: 0 20px;
 }
 
 footer .nav-list .nav-item a {
@@ -294,13 +322,25 @@ footer .copyright {
 
 @media (max-width: 768px) {
   #top .top-title {
-    font-size: 32px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #top .top-title {
+    font-size: 20px;
   }
 }
 
 #top .top-subtitle {
   font-size: 18px;
   padding-bottom: 40px;
+}
+
+@media (max-width: 576px) {
+  #top .top-subtitle {
+    font-size: 13px;
+  }
 }
 
 #profile {
@@ -315,6 +355,12 @@ footer .copyright {
 @media (max-width: 768px) {
   #profile .profile {
     width: 530px;
+  }
+}
+
+@media (max-width: 576px) {
+  #profile .profile {
+    width: 300px;
   }
 }
 
@@ -339,6 +385,12 @@ footer .copyright {
   width: 250px;
   height: auto;
   border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  #profile .profile .icon {
+    width: 200px;
+  }
 }
 
 #profile .profile .profile-text {
@@ -376,6 +428,12 @@ footer .copyright {
 
 #career p {
   line-height: 3;
+}
+
+@media (max-width: 576px) {
+  #career p {
+    font-size: 14px;
+  }
 }
 
 #services {
@@ -439,6 +497,12 @@ footer .copyright {
 
 #services .services-item .services-text p {
   padding-bottom: 80px;
+}
+
+@media (max-width: 576px) {
+  #services .services-item .services-text p {
+    font-size: 14px;
+  }
 }
 
 #services .services-item:nth-child(odd) {
@@ -541,6 +605,13 @@ footer .copyright {
   padding-bottom: 60px;
 }
 
+@media (max-width: 576px) {
+  #plan .plan-notice {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
 #flow {
   background-color: #fff;
   display: -webkit-box;
@@ -556,8 +627,15 @@ footer .copyright {
   padding-left: 70px;
 }
 
+@media (max-width: 576px) {
+  #flow {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 #flow .flow {
-  padding-left: 120px;
+  padding-left: 100px;
   position: relative;
 }
 
@@ -570,7 +648,13 @@ footer .copyright {
   display: block;
   position: absolute;
   top: 0;
-  left: 120px;
+  left: 100px;
+}
+
+@media (max-width: 576px) {
+  #flow .flow::before {
+    display: none;
+  }
 }
 
 #flow .flow > li {
@@ -591,8 +675,14 @@ footer .copyright {
   display: block;
   position: absolute;
   top: 0;
-  left: -120px;
+  left: -100px;
   z-index: 10;
+}
+
+@media (max-width: 576px) {
+  #flow .flow > li .icon {
+    margin-left: 5px;
+  }
 }
 
 #flow .flow > li .icon::after {
@@ -607,9 +697,21 @@ footer .copyright {
   transform: translateY(-50%);
 }
 
+@media (max-width: 576px) {
+  #flow .flow > li .icon::after {
+    display: none;
+  }
+}
+
 #flow .flow > li dl {
   padding-left: 70px;
   position: relative;
+}
+
+@media (max-width: 576px) {
+  #flow .flow > li dl {
+    padding-left: 0;
+  }
 }
 
 #flow .flow > li dl::before,
@@ -618,6 +720,13 @@ footer .copyright {
   display: block;
   position: absolute;
   top: 15px;
+}
+
+@media (max-width: 576px) {
+  #flow .flow > li dl::before,
+  #flow .flow > li dl::after {
+    display: none;
+  }
 }
 
 #flow .flow > li dl::before {
@@ -649,8 +758,13 @@ footer .copyright {
 }
 
 #contact p {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding: 90px 20px;
+}
+
+@media (max-width: 768px) {
+  #contact p {
+    font-size: 24px;
+  }
 }
 
 #contact a {
